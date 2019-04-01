@@ -6,6 +6,7 @@
 
     <!-- Margin Dimens -->
     <dimen name="medium_margin">8dp</dimen>
+    <dimen name="soft_margin">4dp</dimen>
 
     <!-- Padding Dimens -->
     <dimen name="medium_padding">8dp</dimen>

@@ -7,8 +7,8 @@
         android:title="@string/title_technology" />
 
     <item
-        android:id="@+id/navigation_politics"
-        android:icon="@drawable/ic_round_supervised_user_circle_white_48"
-        android:title="@string/title_politics" />
+        android:id="@+id/navigation_entertainment"
+        android:icon="@drawable/ic_round_videogame_asset_white_48"
+        android:title="@string/title_games" />
 
 </menu>

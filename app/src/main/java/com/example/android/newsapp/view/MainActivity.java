@@ -59,20 +59,19 @@ public class MainActivity extends AppCompatActivity {
         switch (menuItemSelected){
             case R.id.navigation_technology:
                 navigation.getMenu().getItem(0).setChecked(true);
-                fragmentTransaction.replace(R.id.container, new TechnologyFragment());
+                fragmentTransaction.replace(R.id.linearlayout_container, new TechnologyFragment());
                 break;
-            case R.id.navigation_politics:
+            case R.id.navigation_entertainment:
                 navigation.getMenu().getItem(1).setChecked(true);
-                fragmentTransaction.replace(R.id.container, new PoliticsFragment());
+                fragmentTransaction.replace(R.id.linearlayout_container, new GamesFragment());
                 break;
             default:
                 navigation.getMenu().getItem(0).setChecked(true);
-                fragmentTransaction.replace(R.id.container, new TechnologyFragment());
+                fragmentTransaction.replace(R.id.linearlayout_container, new TechnologyFragment());
                 break;
         }
 
         fragmentTransaction.commit();
-
     }
 
 }

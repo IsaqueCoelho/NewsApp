@@ -5,11 +5,12 @@ import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
 
 import com.example.android.newsapp.model.News;
-import com.example.android.newsapp.repository.PoliticsRepository;
+import com.example.android.newsapp.repository.NewsRepository;
+import com.example.android.newsapp.utils.ConstantUtils;
 
 import java.util.List;
 
-public class PoliticsViewModel extends ViewModel {
+public class GamesViewModel extends ViewModel {
 
     private MutableLiveData<List<News>> mNewsList;
 
@@ -18,8 +19,9 @@ public class PoliticsViewModel extends ViewModel {
             return;
         }
 
-        PoliticsRepository mNewsRepository = PoliticsRepository.getInstance();
+        NewsRepository mNewsRepository = NewsRepository.getInstance();
         mNewsRepository.clearNewsList();
+        mNewsRepository.buildNewsList(ConstantUtils.CONSTANT_GAMES);
         mNewsList = mNewsRepository.getNewsList();
     }
 

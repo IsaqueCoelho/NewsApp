@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">NewsApp</string>
     <string name="title_technology">technology</string>
-    <string name="title_politics">politics</string>
+    <string name="title_games">games</string>
     <string name="msg_textview_newsdate">Date:</string>
-    <string name="msg_textview_newsauthor">Author</string>
+    <string name="msg_textview_newsauthor">Author:</string>
 </resources>

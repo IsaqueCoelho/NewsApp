@@ -3,10 +3,10 @@ package com.example.android.newsapp.viewmodel;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
-import android.content.Context;
 
 import com.example.android.newsapp.model.News;
-import com.example.android.newsapp.repository.TechnologyRepository;
+import com.example.android.newsapp.repository.NewsRepository;
+import com.example.android.newsapp.utils.ConstantUtils;
 
 import java.util.List;
 
@@ -19,8 +19,9 @@ public class TechnologyViewModel extends ViewModel {
             return;
         }
 
-        TechnologyRepository mNewsRepository = TechnologyRepository.getInstance();
+        NewsRepository mNewsRepository = NewsRepository.getInstance();
         mNewsRepository.clearNewsList();
+        mNewsRepository.buildNewsList(ConstantUtils.CONSTANT_TECHNOLOGY);
         mNewsList = mNewsRepository.getNewsList();
     }
 

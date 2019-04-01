@@ -29,8 +29,8 @@ public class TechnologyFragment extends Fragment {
     private TechnologyViewModel mTechnologyViewModel;
     private NewsAdapter mNewsAdapter;
 
-    @BindView(R.id.recyclerview_technologylist)
-    RecyclerView recyclerViewTechnologyList;
+    @BindView(R.id.recyclerview_newslist)
+    RecyclerView recyclerViewNewsList;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -71,8 +71,8 @@ public class TechnologyFragment extends Fragment {
         LinearLayoutManager linearLayoutManager =
                 new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
 
-        recyclerViewTechnologyList.setLayoutManager(linearLayoutManager);
-        recyclerViewTechnologyList.setAdapter(mNewsAdapter);
+        recyclerViewNewsList.setLayoutManager(linearLayoutManager);
+        recyclerViewNewsList.setAdapter(mNewsAdapter);
 
     }
 
