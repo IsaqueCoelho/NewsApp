@@ -1,0 +1,13 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!-- Text Dimens -->
+    <dimen name="title_text">16sp</dimen>
+    <dimen name="body_text">12sp</dimen>
+
+    <!-- Margin Dimens -->
+    <dimen name="medium_margin">8dp</dimen>
+
+    <!-- Padding Dimens -->
+    <dimen name="medium_padding">8dp</dimen>
+
+</resources>

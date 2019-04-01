@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_technology"
+        android:icon="@drawable/ic_round_public_white_48"
+        android:title="@string/title_technology" />
+
+    <item
+        android:id="@+id/navigation_politics"
+        android:icon="@drawable/ic_round_supervised_user_circle_white_48"
+        android:title="@string/title_politics" />
+
+</menu>
