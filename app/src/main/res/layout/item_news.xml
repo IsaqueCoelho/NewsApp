@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.card.MaterialCardView
-    android:id="@+id/cardview_news"
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/medium_margin"
-    android:layout_marginEnd="@dimen/medium_margin"
-    android:layout_marginTop="@dimen/medium_margin">
+    android:padding="@dimen/medium_padding"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textview_newstitle"
+        style="@style/TitleItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <LinearLayout
+        style="@style/LineItem"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/medium_margin"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/textview_newstitle"
-            style="@style/TitleItem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+        android:baselineAligned="false">
 
         <LinearLayout
-            style="@style/LineItem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <TextView
                 style="@style/TitleItem.topic"
@@ -40,23 +40,43 @@
         </LinearLayout>
 
         <LinearLayout
-            style="@style/LineItem"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <TextView
                 style="@style/TitleItem.topic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/msg_textview_newsauthor" />
+                android:text="@string/msg_textview_newssection" />
 
             <TextView
                 style="@style/TopicResponse"
-                android:id="@+id/textview_newsauthor"
+                android:id="@+id/textview_newssection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+
         </LinearLayout>
 
     </LinearLayout>
 
-</android.support.design.card.MaterialCardView>
+    <LinearLayout
+        style="@style/LineItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/TitleItem.topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/msg_textview_newsauthor" />
+
+        <TextView
+            style="@style/TopicResponse"
+            android:id="@+id/textview_newsauthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</LinearLayout>

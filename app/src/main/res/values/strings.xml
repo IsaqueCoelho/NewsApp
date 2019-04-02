@@ -4,4 +4,6 @@
     <string name="title_games">games</string>
     <string name="msg_textview_newsdate">Date:</string>
     <string name="msg_textview_newsauthor">Author:</string>
+    <string name="error_technologyfragment_connection_failure">No internet Connection</string>
+    <string name="msg_textview_newssection">Section:</string>
 </resources>

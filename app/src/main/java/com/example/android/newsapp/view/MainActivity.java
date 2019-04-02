@@ -15,8 +15,6 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final String LOG_TAG = "MainActivity";
-
     @BindView(R.id.navigation)
     BottomNavigationView navigation;
 
