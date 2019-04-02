@@ -4,9 +4,12 @@ This is a simple Project NewsApp to Udacity nanodegree
  ## Technology
  
  ### Programing
- - AdapterView
+ - ArrayAdapter
  - ArrayList
- - MVVM
+ - JsonParsing
+ - Http Networking
+ - AsuncTaskLoarder
+ - ButterKnife
  
  ### Layout
  - Material Design
