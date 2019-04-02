@@ -6,7 +6,6 @@ This is a simple Project NewsApp to Udacity nanodegree
  ### Programing
  - AdapterView
  - ArrayList
- - MVVM
  
  ### Layout
  - Material Design
