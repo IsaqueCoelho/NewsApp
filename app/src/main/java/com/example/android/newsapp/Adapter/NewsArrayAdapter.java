@@ -28,6 +28,7 @@ public class NewsArrayAdapter extends ArrayAdapter<News> {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.item_news, parent, false);
         }
 
+
         News newsItem = getItem(position);
 
         TextView textViewTitle = listItemView.findViewById(R.id.textview_newstitle);
