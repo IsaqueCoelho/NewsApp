@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.newsapp.Adapter.NewsArrayAdapter;
@@ -36,10 +37,13 @@ public class GamesFragment extends Fragment implements LoaderManager.LoaderCallb
     private NewsArrayAdapter mNewsArrayAdapter;
 
     @BindView(R.id.listview_newslist)
-    private ListView listViewNews;
+    ListView listViewNews;
 
     @BindView(R.id.progressbar_loadingdata)
-    private ProgressBar progressBar;
+    ProgressBar progressBar;
+
+    @BindView(R.id.textview_empty_list_view)
+    TextView textViewEmpty;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -99,6 +103,8 @@ public class GamesFragment extends Fragment implements LoaderManager.LoaderCallb
 
         mNewsArrayAdapter = new NewsArrayAdapter(getContext(), new ArrayList<News>());
 
+        listViewNews.setEmptyView(textViewEmpty);
+
         listViewNews.setAdapter(mNewsArrayAdapter);
 
         listViewNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -108,7 +114,10 @@ public class GamesFragment extends Fragment implements LoaderManager.LoaderCallb
 
                 Uri newsUri = Uri.parse(newsItem.getNewsLink());
                 Intent websiteIntent = new Intent(Intent.ACTION_VIEW, newsUri);
-                startActivity(websiteIntent);
+
+                if(websiteIntent.resolveActivity(getContext().getPackageManager()) != null){
+                    startActivity(websiteIntent);
+                }
             }
         });
     }

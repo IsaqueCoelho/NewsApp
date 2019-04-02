@@ -21,4 +21,14 @@
         android:divider="@color/colorAccent"
         android:dividerHeight="1dp"/>
 
+    <TextView
+        android:id="@+id/textview_empty_list_view"
+        style="@style/TitleItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:textAlignment="center"
+        android:text="@string/msg_textview_nodata"
+        android:visibility="gone" />
+
 </LinearLayout>

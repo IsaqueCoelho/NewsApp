@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.newsapp.Adapter.NewsArrayAdapter;
@@ -24,6 +25,8 @@ import com.example.android.newsapp.R;
 import com.example.android.newsapp.model.News;
 import com.example.android.newsapp.utils.ConstantUtils;
 import com.example.android.newsapp.utils.NewsLoaderUtils;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +43,9 @@ public class TechnologyFragment extends Fragment implements LoaderManager.Loader
 
     @BindView(R.id.progressbar_loadingdata)
     ProgressBar progressBar;
+
+    @BindView(R.id.textview_empty_list_view)
+    TextView textViewEmpty;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -99,6 +105,8 @@ public class TechnologyFragment extends Fragment implements LoaderManager.Loader
 
         mNewsArrayAdapter = new NewsArrayAdapter(getContext(), new ArrayList<News>());
 
+        listViewNews.setEmptyView(textViewEmpty);
+
         listViewNews.setAdapter(mNewsArrayAdapter);
 
         listViewNews.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -108,7 +116,10 @@ public class TechnologyFragment extends Fragment implements LoaderManager.Loader
 
                 Uri newsUri = Uri.parse(newsItem.getNewsLink());
                 Intent websiteIntent = new Intent(Intent.ACTION_VIEW, newsUri);
-                startActivity(websiteIntent);
+
+                if(websiteIntent.resolveActivity(getContext().getPackageManager()) != null){
+                    startActivity(websiteIntent);
+                }
             }
         });
     }
