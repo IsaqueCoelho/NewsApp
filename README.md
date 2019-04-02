@@ -6,7 +6,7 @@ This is a simple Project NewsApp to Udacity nanodegree
  ### Programing
  - ArrayAdapter
  - ArrayList
- - JsonParsin
+ - JsonParsing
  - Http Networking
  - AsuncTaskLoarder
  - ButterKnife
